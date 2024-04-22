@@ -145,5 +145,17 @@
 		skillsWayPoint();
 	});
 
+	// Función para cerrar el popup
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// Detectar el idioma del navegador
+var userLang = navigator.language || navigator.userLanguage;
+if (userLang.startsWith("es")) { // Si es español
+    document.getElementById("popup").style.display = "block"; // Mostrar el popup
+}
+
+
 
 }());
