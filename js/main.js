@@ -145,7 +145,7 @@
 		skillsWayPoint();
 	});
 
-	// Función para cerrar el popup
+// Función para cerrar el popup
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
@@ -153,9 +153,10 @@ function closePopup() {
 // Detectar el idioma del navegador
 var userLang = navigator.language || navigator.userLanguage;
 if (userLang.startsWith("es")) { // Si es español
-    document.getElementById("popup").style.display = "block"; // Mostrar el popup
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("popup").style.display = "block"; // Mostrar el popup
+    });
 }
-
 
 
 }());
